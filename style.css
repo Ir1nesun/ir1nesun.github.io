@@ -1,0 +1,357 @@
+@font-face {
+  font-family: 'TT Lakes';
+  src: url(TTLakesNeue-Thin.woff2) format('.woff2');
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/* Основные стили для всех устройств */
+body {
+  font-family: 'TT Lakes';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+  background-color: #f8f8f8;
+  }
+
+  button {
+   background-color: #fff;
+   transition: 0.2s ease 0.1s;
+  }
+
+  button:hover {
+   background-color: #e0f7fa; 
+}
+  .header {
+    padding: 10px 5px; 
+    background-color: #fff;
+    border-bottom: #d9fff5 1px solid;
+  }
+
+  .header__nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; 
+  }
+
+  .nav__button {  
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+  }
+
+  .nav__button .menu-button {
+    background-color: #fff; 
+    display: inline-block; 
+  }
+
+  .header__dividor .menu-divitor{ /*разделитель*/
+    display: flex;
+    align-items: center;
+    width: 2px; 
+    min-height: 32px; 
+    background-color: rgba(234, 234, 234, 1);
+    margin: 0 5px; 
+  }
+
+  .header__item:nth-child(3) { 
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+  }
+
+
+  .header__item .nav__button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header__item:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .header__item:nth-child(2) {
+    display: none; 
+  }
+
+  .header__dividor{
+    width: 2px; 
+    min-height: 32px; 
+    background-color: rgba(234, 234, 234, 1);
+    margin: 0 5px; 
+  }
+
+  .nav__button .nav__button--repair,
+  .nav__button .nav__button--search{
+    display: inline-block;
+  }
+
+  .main {
+    background-color: #f8f8f8;
+  }
+
+  .main__title {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 40px; 
+    letter-spacing: -0.6px;
+    position: relative; 
+    padding: 24px 0 0 12px;
+  }
+
+  .main__title::before { /*линия*/ 
+    content: '';
+    display: inline-block;
+    width: 4px;
+    min-height: 40px;
+    position: absolute;
+    left: 0;
+    background-color: #41F6D7;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .main__tabs{
+   display: flex;
+   overflow: auto;
+  }
+
+  .main__tab-link { 
+    font-weight: 500;
+    line-height: 36px;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: rgba(126, 126, 130, 1);
+    display: inline-block;
+    min-height: 40px;
+    white-space: nowrap;
+    padding: 0 16px;
+    border: #f8f8f8 2px solid;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  .main__tab-link:focus,
+  .main__tab-link:hover {
+    background-color: #fff;
+    border: rgba(184, 255, 236, 1) 2px solid;
+    border-radius: 6px;
+  }
+
+  .main__content{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto; 
+  }
+
+  .main__text{
+    font-size: 14px;
+    margin: 24px 16px 0 16px; 
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+    max-height: 90px; 
+  }
+
+  .main__read-more{
+    display: inline-block;
+    font-weight: 500;
+   font-size: 16px;
+   letter-spacing: -0.2px;
+   background-color: #f8f8f8;
+   background:#f8f8f8 url('expand.png') no-repeat 0 50%; 
+   margin: 16px 0;
+  }
+
+  .main__read-more::before {
+    content: '';
+    margin-right: 26px;
+  }
+
+  .main__img{
+    display: inline-block;
+    width: 100%;
+  }
+
+  .main__repair,
+  .main__checkstatus,
+  .menu-divitor  {
+    display: none;
+  }
+
+ /* Стили для планшетов */
+ @media (min-width: 767px) {
+  .header__nav{
+    margin: 18px 24px;
+  }
+
+  .header__item:nth-child(1) {
+    display: flex;
+    align-items: center;
+    margin-right:auto;
+  }
+
+  .header__item:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+  }
+
+  .header__item:nth-child(3) {
+    display: flex;
+    align-items: center;
+    gap: 16px; 
+  }
+
+  .header__dividor {
+    display: flex;
+    margin: 0 10px; 
+  }
+
+  .header__dividor .menu-divitor {
+    width: 1px; 
+    min-height: 20px; 
+  }
+
+  .nav__button {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+  }
+
+  .nav__button .menu-button{
+    margin-right: 0;
+  }
+
+  .main__tabs{
+    margin:32px 24px;
+  }
+
+  .main__tabs ::after{
+    top: 95px;
+    width: 50px;
+  }
+
+  .main__tabs::before{
+    top: 95px;
+    width: 45px;
+  }
+
+  .main__content{
+    margin:32px 24px;
+    justify-content: space-between;
+  }
+
+  .main__text{
+    margin: 0;
+    max-height: 160px;
+  }
+
+  .main__content-read{
+    max-width: 43.6%;
+  }
+
+  .main__img{
+    max-width: 46.875%;
+  }
+
+  .main__text-item:nth-child(1) {
+    margin-bottom: 31px;
+  }
+ }
+ /*компьютеры*/
+ @media (min-width: 1120px) {
+  body{
+    align-items: center;
+  }
+
+  button{
+    background-color: #f8f8f8;
+  }
+
+  .header{
+    display: none;
+  }
+
+  .main{
+    margin: 42px 0;
+    max-width: 1120px;
+  }
+
+  .main__header{
+   display: flex;
+  }
+
+  .main__title{
+    flex-grow: 1;
+    padding-top: 0;
+  }
+
+  .main__repair, .main__checkstatus {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    margin-right: 32px;
+    border: none; 
+  }
+
+  .main__repair::before{
+    content: 'Оставить заявку';
+    line-height: 40px;
+    margin-right: 10px;
+    color: black;
+    vertical-align: text-bottom;
+  }
+
+  .main__checkstatus::before{
+    content: 'Статус ремонта';
+    line-height: 40px;
+    margin-right: 10px;
+    color: black;
+    vertical-align: text-bottom;
+  }
+
+  .main__tabs{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+
+  .main__tabs::after,
+  .main__tabs::before{
+    content: '';
+    display: none;
+  }
+
+  .main__content{
+    margin: 7px 25px 0 25px;
+  }
+
+  .main__content-read{
+    max-width: 46%;
+  }
+
+  .main__img{
+    max-width: 531px;
+  }
+}    
